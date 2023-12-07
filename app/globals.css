@@ -17,6 +17,5 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
   background: #f7fafd;
 }
