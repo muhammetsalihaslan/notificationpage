@@ -7,7 +7,8 @@
 		"where": "My first tournement today!",
 		"time": "1m ago",
 		"comment": "",
-        "material":""
+        "material":"",
+		"completed": true
 	},
 	{
 		"id": 2,
@@ -17,7 +18,8 @@
 		"where": "",
 		"time": "5m ago",
 		"comment": "",
-        "material":""
+        "material":"",
+		"completed": true
 	},
 	{
 		"id": 3,
@@ -27,7 +29,8 @@
 		"where": "Chess Club",
 		"time": "1day ago",
 		"comment": "",
-        "material":""
+        "material":"",
+		"completed":true
 	},
 	{
 		"id": 4,
@@ -37,7 +40,8 @@
 		"where": "",
 		"time": "5days ago",
 		"comment": "Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game",
-        "material":""
+        "material":"",
+		"completed":false
 	},
 	{
 		"id": 5,
@@ -47,7 +51,8 @@
 		"where": "",
 		"time": "1week ago",
 		"comment": "",
-        "material": "/images/image-chess.webp"
+        "material": "/images/image-chess.webp",
+		"completed":false
 	},
     {
         "id": 6,
@@ -57,7 +62,8 @@
         "where": "5 end-game strategies to increase your win rate",
         "time": "2weeks ago",
         "comment": "",
-        "material":""
+        "material":"",
+		"completed":false
 
     },
     {
@@ -68,6 +74,7 @@
         "where": "Chess Club",
         "time": "2weeks ago",
         "comment": "",
-        "material":""
+        "material":"",
+		"completed":false
     }
 ]

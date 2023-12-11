@@ -6,8 +6,28 @@ import ProjectData from "/assets/data/project.json";
 const MessagePart = () => {
   return (
     <div>
+      <div className="flex justify-between w-full">
+        <div className="flex gap-x-2 justify-center items-center">
+          <h1 className="text-2xl font-bold">Notifications</h1>
+          <div className="w-[35px] h-[35px] bg-[#0A317B] text-white flex justify-center items-center rounded-md font-bold">
+            0
+          </div>
+        </div>
+        <div className="flex justify-center items-center font-semibold">
+          <h1 className="hover:text-[#0A317B] cursor-pointer">
+            Mark all as read
+          </h1>
+        </div>
+      </div>
       {ProjectData.map((project) => (
-        <div key={project.id}>
+        <div
+          key={project.id}
+          className={
+            project.completed
+              ? "border border-none bg-[#F7FAFD] rounded-md cursor-pointer"
+              : ""
+          }
+        >
           <div className="p-2 flex mt-5 justify-between  ">
             <div className="flex">
               <div>
@@ -24,6 +44,11 @@ const MessagePart = () => {
                   <p className="font-bold text-slate-600 hover:text-[#0A317B] cursor-pointer ">
                     {project.where}
                   </p>
+                  {project.completed ? (
+                    <div className="w-2 h-2 mt-2 bg-red-500 rounded-full"></div>
+                  ) : (
+                    ""
+                  )}
                 </div>
                 <div className="text-sm text-slate-300 cursor-default">
                   {project.time}
