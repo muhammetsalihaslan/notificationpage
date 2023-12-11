@@ -43,13 +43,17 @@ const MessagePart = () => {
               )}
             </div>
           </div>
-          <div className="border text-sm ms-[4rem] me-[3rem] p-2 rounded-md cursor-pointer hover:bg-sky-100">
-            <p>
-              Hello, thanks for setting up the Chess Club. I've been a member
-              for a few weeks now and I'm already having lots of fun and
-              improving my game
-            </p>
-          </div>
+          {project.comment ? (
+            <div className="border text-sm ms-[4rem] me-[3rem] p-2 rounded-md cursor-pointer hover:bg-sky-100">
+              <p>
+                Hello, thanks for setting up the Chess Club. I've been a member
+                for a few weeks now and I'm already having lots of fun and
+                improving my game
+              </p>
+            </div>
+          ) : (
+            ""
+          )}
         </div>
       ))}
     </div>
