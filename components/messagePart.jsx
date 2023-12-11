@@ -13,6 +13,14 @@ const MessagePart = () => {
     );
     setTodos(updatedData);
   };
+
+  const handleMarkAllAsRead = () => {
+    const updatedData = todos.map((project) => ({
+      ...project,
+      completed: true,
+    }));
+    setTodos(updatedData);
+  };
   return (
     <div>
       <div className="flex justify-between w-full">
@@ -23,7 +31,10 @@ const MessagePart = () => {
           </div>
         </div>
         <div className="flex justify-center items-center font-semibold">
-          <h1 className="hover:text-[#0A317B] cursor-pointer">
+          <h1
+            className="hover:text-[#0A317B] cursor-pointer"
+            onClick={handleMarkAllAsRead}
+          >
             Mark all as read
           </h1>
         </div>
