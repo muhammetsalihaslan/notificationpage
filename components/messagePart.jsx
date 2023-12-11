@@ -1,10 +1,18 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import ProjectData from "/assets/data/project.json";
 
 const MessagePart = () => {
-  const itemsLeft = ProjectData.filter((item) => item.completed).length;
+  const [todos, setTodos] = useState(ProjectData);
+  const itemsLeft = todos.filter((item) => !item.completed).length;
+
+  const handleClick = (id) => {
+    const updatedData = todos.map((project) =>
+      project.id === id ? { ...project, completed: true } : project
+    );
+    setTodos(updatedData);
+  };
   return (
     <div>
       <div className="flex justify-between w-full">
@@ -20,14 +28,15 @@ const MessagePart = () => {
           </h1>
         </div>
       </div>
-      {ProjectData.map((project) => (
+      {todos.map((project) => (
         <div
           key={project.id}
           className={
             project.completed
-              ? "border border-none bg-[#F7FAFD] rounded-md cursor-pointer"
-              : ""
+              ? ""
+              : "border border-none bg-[#F7FAFD] rounded-md cursor-pointer"
           }
+          onClick={() => handleClick(project.id)}
         >
           <div className="p-2 flex mt-5 justify-between  ">
             <div className="flex">
@@ -46,9 +55,9 @@ const MessagePart = () => {
                     {project.where}
                   </p>
                   {project.completed ? (
-                    <div className="w-2 h-2 mt-2 bg-red-500 rounded-full"></div>
-                  ) : (
                     ""
+                  ) : (
+                    <div className="w-2 h-2 mt-2 bg-red-500 rounded-full"></div>
                   )}
                 </div>
                 <div className="text-sm text-slate-300 cursor-default">

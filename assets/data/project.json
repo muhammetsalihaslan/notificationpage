@@ -8,7 +8,7 @@
 		"time": "1m ago",
 		"comment": "",
         "material":"",
-		"completed": true
+		"completed": false
 	},
 	{
 		"id": 2,
@@ -19,7 +19,7 @@
 		"time": "5m ago",
 		"comment": "",
         "material":"",
-		"completed": true
+		"completed": false
 	},
 	{
 		"id": 3,
@@ -30,7 +30,7 @@
 		"time": "1day ago",
 		"comment": "",
         "material":"",
-		"completed":true
+		"completed":false
 	},
 	{
 		"id": 4,
@@ -41,7 +41,7 @@
 		"time": "5days ago",
 		"comment": "Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game",
         "material":"",
-		"completed":false
+		"completed":true
 	},
 	{
 		"id": 5,
@@ -52,7 +52,7 @@
 		"time": "1week ago",
 		"comment": "",
         "material": "/images/image-chess.webp",
-		"completed":false
+		"completed":true
 	},
     {
         "id": 6,
@@ -63,7 +63,7 @@
         "time": "2weeks ago",
         "comment": "",
         "material":"",
-		"completed":false
+		"completed":true
 
     },
     {
@@ -75,6 +75,6 @@
         "time": "2weeks ago",
         "comment": "",
         "material":"",
-		"completed":false
+		"completed":true
     }
 ]
