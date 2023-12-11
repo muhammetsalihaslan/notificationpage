@@ -55,7 +55,7 @@ const MessagePart = () => {
                 <Image src={project.imageData} width={50} height={50} />
               </div>
               <div className="p-1">
-                <div className="flex gap-x-3">
+                <div className="flex flex-wrap md:gap-x-3">
                   <h1 className=" font-bold hover:text-[#0A317B] cursor-pointer ">
                     {project.name}
                   </h1>
@@ -68,7 +68,7 @@ const MessagePart = () => {
                   {project.completed ? (
                     ""
                   ) : (
-                    <div className="w-2 h-2 mt-2 bg-red-500 rounded-full"></div>
+                    <div className="w-2 h-2 mt-2 bg-red-500 rounded-full ms-2"></div>
                   )}
                 </div>
                 <div className="text-sm text-slate-300 cursor-default">
